@@ -5,6 +5,11 @@
     <title>Superhero Database</title>
 </head>
 <body>
-<h1>Sample text</h1>
+<h1>List of Superheroes</h1>
+<ul>
+    {% for superheroes in all_superheroes %}
+    <li><h2> {{superheroes.name}} </h2></li>
+    {% endfor %}
+</ul>
 </body>
 </html>
