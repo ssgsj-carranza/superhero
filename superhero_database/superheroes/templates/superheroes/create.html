@@ -5,7 +5,7 @@
     <title>Superhero Database</title>
 </head>
 <body>
-<form action = "{% url 'movies:create_new_superhero' %}" method = "post">
+<form action = "{% url 'superheroes:create_new_superhero' %}" method = "post">
     {% csrf_token %}
     Superhero_name:<input type="text" name="superhero name" id="superhero name"><br>
     Alter_ego:<input type="text" name="alter ego" id="alter ego"><br>

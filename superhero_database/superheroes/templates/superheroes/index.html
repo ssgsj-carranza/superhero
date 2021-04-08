@@ -8,7 +8,8 @@
 <h1>List of Superheroes</h1>
 <ul>
     {% for superheroes in all_superheroes %}
-    <li><h2> {{superheroes.name}} </h2></li>
+        <li><h2> {{superheroes.heroes_name}} </h2>
+        <a href="{% url 'superheroes:detail' superheroes.id %}">See more info</a></li>
     {% endfor %}
 </ul>
 </body>
