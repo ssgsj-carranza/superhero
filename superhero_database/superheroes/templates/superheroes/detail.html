@@ -5,19 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Destroy Hero</title>
+    <title>Superhero Details</title>
 </head>
 <body>
     <div class="row justify-content-center">
-        <h1>Delete Superhero</h1>
+        <h1>Confidential</h1>
     </div>
     <br>
     <div class="container-fluid">
         <div class="row justify-content-center align-items-end">
-        <form method="post">
-            {% csrf_token %}
-            <input type="submit" value="Destroy Hero" />
-        </form>
+            <form method="POST">
+                {% csrf_token %}
+            </form>
+            <img class="col" src="{{.........}}">
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-end">
+            <ul style="margin-right: 2rem; font-weight: 800;" >
+                <li>Alter Ego: {{ superheroes.alter_ego }}</li>
+                <li>Primary Ability: {{ superheroes.primary_ability }}</li>
+                <li>Secondary Ability: {{ superheroes.secondary_ability }}</li>
+                <li>Catchphrase: {{ superheroes.catch_phrase }}</li>
+                <li>Image: {{ superheroes.images }}</li>
+            </ul>
             <button><a style="color: black;" href="{% url 'superheroes:index' %}">Return To Base</a></button>
         </div>
     </div>

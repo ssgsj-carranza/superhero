@@ -1,19 +1,57 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"-->
+<!--          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+<!--    <title>Create Your Hero</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="row justify-content-center">-->
+<!--        <h1>Create Superhero</h1>-->
+<!--    </div>-->
+<!--    <br>-->
+<!--    <div class="container-fluid">-->
+<!--        <div class="row justify-content-center align-items-end">-->
+<!--        <form action="{% url 'superheroes:create_new_superhero' %}" enctype="multipart/form-data" method="post">-->
+<!--            {% csrf_token %}-->
+<!--            {{ form.as_p }}-->
+<!--            <input type="submit" value="Create"/>-->
+<!--        </form>-->
+<!--            <button><a style="color: black;" href="{% url 'superheroes:index' %}">Return to Base</a></button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"-->
+<!--        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"-->
+<!--        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"-->
+<!--        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Superhero Database</title>
+    <link rel = "stylesheet" href="style.css">
+    <title>Create New Hero</title>
 </head>
+<h1>Create New Hero</h1>
 <body>
-<form action = "{% url 'superheroes:create_new_superhero' %}" method = "post">
-    {% csrf_token %}
-    Superhero_name:<input type="text" name="superhero name" id="superhero name"><br>
-    Alter_ego:<input type="text" name="alter ego" id="alter ego"><br>
-    Primary_ability:<input type="text" name="primary ability" id="primary ability"><br>
-    Secondary_ability:<input type="text" name="secondary ability" id="secondary ability"><br>
-    Catchphrase:<input type="text" name="catchphrase" id="catchphrase"><br>
-    <input type="submit" value="Add new hero">
-</form>
 
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+<!--    Name:<input type="text" name="name" id="name"><br>-->
+<!--    Alter Ego:<input type="text" name="alter" id="alter"><br>-->
+<!--    Primary Ability:<input type="text" name="primary" id="primary"><br>-->
+<!--    Secondary Ability:<input type="text" name="secondary" id="secondary"><br>-->
+<!--    Catch Phrase<input type="text" name="phrase" id="phrase"><br>-->
+    <input type="submit" value="Create">
+</form>
 </body>
 </html>
